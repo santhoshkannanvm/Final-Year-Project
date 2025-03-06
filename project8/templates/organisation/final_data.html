@@ -1,0 +1,266 @@
+<!doctype html>
+{% extends "organisation/org_index.html" %}
+{% load static %}
+
+{% block content %}
+<html lang="en">
+  <head>
+	  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+/* CSS */
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+</style>
+  	<title>Table 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'admin/view_org/css/style.css' %}">
+
+	</head>
+	<body>
+	    <script>
+{% for msg in messages %}
+
+    alert('{{ msg }}');
+{% endfor %}
+
+</script>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+<!--					<h2 class="heading-section">Table #02</h2>-->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table">
+						  <thead class="thead-dark">
+						    <tr>
+						        <th scope="col" style="font-color:white;">ORGANISATION TYPE</th>
+              <th scope="col">PURPOSE</th>
+              <th scope="col">QUANTATIY</th>
+              <th scope="col">QUERY</th>
+<!--              <th scope="col">PREDICT</th>-->
+              <th scope="col">NEEDED ISOTOPE</th>
+<!--              <th scope="col">NEXT PROCESS</th>-->
+<!--              <th scope="col">FORWARD</th>-->
+						    </tr>
+						  </thead>
+						  <tbody>
+						  {% for data in datas %}
+						    <tr class="alert" role="alert">
+						      <td>{{data.organisation}}</td>
+          <td>{{data.type}}</td>
+          <td>{{data.quantaity}}</td>
+              <td>{{data.query}}</td>
+          <td class="glow1">{{data.solutions}}</td>
+<!--								<td><a href="/dec11/{{data.id}}"> <button class="button-50" role="button">PAY</button></a></td>-->
+  </form>
+</div></td>
+
+
+
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+<!--						      <td>-->
+<!--&lt;!&ndash;						      	<a href="#" class="close" data-dismiss="alert" aria-label="Close">&ndash;&gt;-->
+<!--&lt;!&ndash;				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>&ndash;&gt;-->
+<!--				          	</a>-->
+<!--				        	</td>-->
+						    </tr>
+						  {% endfor %}
+<!--						    <tr class="alert" role="alert">-->
+<!--						      <th scope="row">002</th>-->
+<!--						      <td>Jacob</td>-->
+<!--						      <td>Thornton</td>-->
+<!--						      <td>jacobthornton@email.com</td>-->
+<!--						      <td>-->
+<!--						      	<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>-->
+<!--				          	</a>-->
+<!--				        	</td>-->
+<!--						    </tr>-->
+<!--						    <tr class="alert" role="alert">-->
+<!--						      <th scope="row">003</th>-->
+<!--						      <td>Larry</td>-->
+<!--						      <td>the Bird</td>-->
+<!--						      <td>larrybird@email.com</td>-->
+<!--						      <td>-->
+<!--						      	<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>-->
+<!--				          	</a>-->
+<!--				        	</td>-->
+<!--						    </tr>-->
+<!--						    <tr class="alert" role="alert">-->
+<!--						      <th scope="row">004</th>-->
+<!--						      <td>John</td>-->
+<!--						      <td>Doe</td>-->
+<!--						      <td>johndoe@email.com</td>-->
+<!--						      <td>-->
+<!--						      	<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>-->
+<!--				          	</a>-->
+<!--				        	</td>-->
+<!--						    </tr>-->
+<!--						    <tr class="alert" role="alert">-->
+<!--						      <th scope="row">005</th>-->
+<!--						      <td>Gary</td>-->
+<!--						      <td>Bird</td>-->
+<!--						      <td>garybird@email.com</td>-->
+<!--						      <td>-->
+<!--						      	<a href="#" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--				            	<span aria-hidden="true"><i class="fa fa-close"></i></span>-->
+<!--				          	</a>-->
+<!--				        	</td>-->
+<!--						    </tr>-->
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'admin/view_org/js/jquery.min.js' %}"></script>
+  <script src="{% static 'admin/view_org/js/popper.js' %}"></script>
+  <script src="{% static 'admin/view_org/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'admin/view_org/js/main.js' %}"></script>
+{% endblock %}
+	</body>
+</html>
+
+<!-- HTML !-->
+
+

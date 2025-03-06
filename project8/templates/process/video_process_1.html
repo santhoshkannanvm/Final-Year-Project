@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+    .videoBG {
+    position: fixed;
+    z-index:-1;
+    width:3000px;
+    height:4000px;
+    margin-top:-1620px;
+    margin-left:-10px;
+}
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+
+.wrapper.four {
+    background-color: #9ba5b4;
+    font-size: 3rem;
+    font-family: "Play", sans-serif;
+}
+.four .type{
+    padding: 2rem 1rem;
+    width: auto;
+    margin: auto;
+}
+.four h3 {
+    width: 13ch;
+    border-right: 4px solid black;
+    margin: 2rem auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate;
+}
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+ background: #111;
+ font-family: "Open Sans",  Impact;
+}
+
+.area {
+  text-align: center;
+  font-size: 6.5em;
+  color: #fff;
+  letter-spacing: -7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+
+
+
+
+
+</style>
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'delivery.css' %}">
+  <script  src="{% static 'delivery.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'process/text/style.css' %}">
+
+</head>
+<body>
+<script>
+{% for msg in messages %}
+
+	 alert('{{ msg }}');
+{% endfor %}
+
+
+</script>
+<video class="videoBG" poster="poster.JPG" autoplay muted loop style="width:100%"; height="auto; position: fixed; z-index:-1;">
+  <source src="{% static 'video/v6.mp4' %}" type="video/mp4">
+</video>
+<div class="container box" id="text" style="visibility: hidden;">
+<!--  <div class="word">PROCESS</div>-->
+<!--  <div class="word">COMPLETED</div>-->
+<!--  <div class="word">Amazing</div>-->
+</div>
+
+<!--<button>hi</button>-->
+<!-- HTML !-->
+<!--<button  class="button-73" role="button" style="margin-left:600px; margin-top:320px; display: block;">PRODUCT DELIVERED</button>-->
+<!-- HTML !-->
+<a href="/redirect1/"> <button class="button-24" role="button" id="button-24" style="margin-top:-750px; margin-left:400px; width:600px; font-size:18px; visibility:hidden;" >PROCESS COMPLETED </button></a>
+<!-- <div class="area">Redericting</div>-->
+<!--<button class="button" id="button"  >Button</button>-->
+<!--<h2 id="demo"> hello </h2>-->
+<script type="text/javascript">
+  function showlink() {
+          document.getElementById("button-24").style.visibility= "visible";
+
+  }
+      setTimeout("showlink()", 7000);
+
+
+      </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

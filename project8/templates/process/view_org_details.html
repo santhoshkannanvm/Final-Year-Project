@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+{% extends "process/process_index.html" %}
+{% load static %}
+
+{% block content %}
+  <head>
+    <style>
+      /* CSS */
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+ @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+ .wrapper.four {
+    background-color: #9ba5b4;
+    font-size: 3rem;
+    font-family: "Play", sans-serif;
+}
+.four .type{
+    padding: 2rem 1rem;
+    width: auto;
+    margin: auto;
+}
+.four h3 {
+    width: 13ch;
+    border-right: 4px solid black;
+    margin: 2rem auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(13, end), blink-caret 0.5s step-end infinite alternate;
+}
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'process/view_org_details/fonts/icomoon/style.css' %}">
+
+    <link rel="stylesheet" href="{% static 'process/view_org_details/css/owl.carousel.min.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'process/view_org_details/css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'process/view_org_details/css/style.css' %}">
+
+    <title>Table #8</title>
+  </head>
+  <body>
+      <script>
+{% for msg in messages %}
+
+    alert('{{ msg }}');
+{% endfor %}
+        function cclick(){
+
+        setTimeout(function() {
+            window.location.href = "{% url 'loader' %}";
+        }, 1000);  // Delay in milliseconds (2 seconds in this example)
+  }
+
+</script>
+  
+
+  <div class="content">
+    
+    <div class="container">
+      <h2 class="mb-5">ORGANISATION DETAILS</h2>
+      
+
+      <div class="table-responsive custom-table-responsive">
+
+        <table class="table custom-table">
+          <thead>
+            <tr>  
+
+              <th scope="col" style="font-color:white;">
+                <label class="control control--checkbox">
+                  <input type="checkbox"  class="js-check-all"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </th>
+              
+              <th scope="col" style="font-color:white; b;">ORGANISATION</th>
+              <th scope="col" style="font-color:white;">ORGANISATION TYPE</th>
+              <th scope="col">PURPOSE</th>
+              <th scope="col">QUANTATIY</th>
+              <th scope="col">QUERY</th>
+              <th scope="col">PREDICT</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for data in datas %}
+            <tr scope="row">
+              <th scope="row">
+                <label class="control control--checkbox">
+                  <input type="checkbox"/>
+                  <div class="control__indicator"></div>
+                </label>
+              </th>
+              <td>
+                {{data.organisation}}
+              </td>
+              <td><a href="#">{{data.type}}</a></td>
+              <td>
+                {{data.purpose}}
+<!--                <small class="d-block">Far far away, behind the word mountains</small>-->
+              </td>
+
+
+              <td>{{data.quantaity}}</td>
+              <td>{{data.query}}</td>
+              <td><a href="/get_input/{{data.id}}/"> <button class="button-37" role="button" onclick="cclick()">PREDICT</button></a></td>
+            </tr>
+          <!-- HTML !-->
+
+
+
+
+
+  <!--            <tr class="spacer"><td colspan="100"></td></tr>-->
+  <!--            <tr>-->
+  <!--              <th scope="row">-->
+  <!--                <label class="control control&#45;&#45;checkbox">-->
+  <!--                  <input type="checkbox"/>-->
+  <!--                  <div class="control__indicator"></div>-->
+  <!--                </label>-->
+  <!--              </th>-->
+  <!--              -->
+  <!--              <td>4616</td>-->
+  <!--              <td><a href="#">Matthew Wasil</a></td>-->
+  <!--              <td>-->
+  <!--                Graphic Designer-->
+  <!--                <small class="d-block">Far far away, behind the word mountains</small>-->
+  <!--              </td>-->
+  <!--              <td>+02 020 3994 929</td>-->
+  <!--              <td>London College</td>-->
+  <!--            </tr>-->
+  <!--            <tr class="spacer"><td colspan="100"></td></tr>-->
+  <!--            <tr>-->
+  <!--              <th scope="row">-->
+  <!--                <label class="control control&#45;&#45;checkbox">-->
+  <!--                  <input type="checkbox"/>-->
+  <!--                  <div class="control__indicator"></div>-->
+  <!--                </label>-->
+  <!--              </th>-->
+  <!--              -->
+  <!--              <td>9841</td>-->
+  <!--              <td><a href="#">Sampson Murphy</a></td>-->
+  <!--              <td>-->
+  <!--                Mobile Dev-->
+  <!--                <small class="d-block">Far far away, behind the word mountains</small>-->
+  <!--              </td>-->
+  <!--              <td>+01 352 1125 0192</td>-->
+  <!--              <td>Senior High</td>-->
+  <!--            </tr>-->
+  <!--            <tr class="spacer"><td colspan="100"></td></tr>-->
+  <!--            <tr>-->
+  <!--              <th scope="row">-->
+  <!--                <label class="control control&#45;&#45;checkbox">-->
+  <!--                  <input type="checkbox"/>-->
+  <!--                  <div class="control__indicator"></div>-->
+  <!--                </label>-->
+  <!--              </th>-->
+  <!--              -->
+  <!--              <td>9548</td>-->
+  <!--              <td><a href="#">Gaspar Semenov</a></td>-->
+  <!--              <td>-->
+  <!--                Illustrator-->
+  <!--                <small class="d-block">Far far away, behind the word mountains</small>-->
+  <!--              </td>-->
+  <!--              <td>+92 020 3994 929</td>-->
+  <!--              <td>College</td>-->
+  <!--            </tr>-->
+  <!--            <tr class="spacer"><td colspan="100"></td></tr>-->
+  <!--            <tr>-->
+  <!--              <th scope="row">-->
+  <!--                <label class="control control&#45;&#45;checkbox">-->
+  <!--                  <input type="checkbox"/>-->
+  <!--                  <div class="control__indicator"></div>-->
+  <!--                </label>-->
+  <!--              </th>-->
+  <!--              -->
+  <!--              <td>4616</td>-->
+  <!--              <td><a href="#">Matthew Wasil</a></td>-->
+  <!--              <td>-->
+  <!--                Graphic Designer-->
+  <!--                <small class="d-block">Far far away, behind the word mountains</small>-->
+  <!--              </td>-->
+  <!--              <td>+02 020 3994 929</td>-->
+  <!--              <td>London College</td>-->
+  <!--            </tr>-->
+  <!--            <tr class="spacer"><td colspan="100"></td></tr>-->
+  <!--            <tr>-->
+  <!--              <th scope="row">-->
+  <!--                <label class="control control&#45;&#45;checkbox">-->
+  <!--                  <input type="checkbox"/>-->
+  <!--                  <div class="control__indicator"></div>-->
+  <!--                </label>-->
+  <!--              </th>-->
+  <!--              -->
+  <!--              <td>9841</td>-->
+  <!--              <td><a href="#">Sampson Murphy</a></td>-->
+  <!--              <td>-->
+  <!--                Mobile Dev-->
+  <!--                <small class="d-block">Far far away, behind the word mountains</small>-->
+  <!--              </td>-->
+  <!--              <td>+01 352 1125 0192</td>-->
+  <!--              <td>Senior High</td>-->
+  <!--            </tr>-->
+  <!--            <tr class="spacer"><td colspan="100"></td></tr>-->
+  <!--            <tr>-->
+  <!--              <th scope="row">-->
+  <!--                <label class="control control&#45;&#45;checkbox">-->
+  <!--                  <input type="checkbox"/>-->
+  <!--                  <div class="control__indicator"></div>-->
+  <!--                </label>-->
+  <!--              </th>-->
+  <!--              -->
+  <!--              <td>9548</td>-->
+  <!--              <td><a href="#">Gaspar Semenov</a></td>-->
+  <!--              <td>-->
+  <!--                Illustrator-->
+  <!--                <small class="d-block">Far far away, behind the word mountains</small>-->
+  <!--              </td>-->
+  <!--              <td>+92 020 3994 929</td>-->
+  <!--              <td>College</td>-->
+  <!--            </tr>-->
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
+  </div>
+    
+    
+
+    <script src="{% static 'process/view_org_details/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'process/view_org_details/js/popper.min.js' %}"></script>
+    <script src="{% static 'process/view_org_details/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'process/view_org_details/js/main.js' %}"></script>
+  {% endblock %}
+  </body>
+</html>

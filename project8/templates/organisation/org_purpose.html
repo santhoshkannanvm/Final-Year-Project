@@ -1,0 +1,142 @@
+<!--Author: W3layouts
+   Author URL: http://w3layouts.com
+   License: Creative Commons Attribution 3.0 Unported
+   License URL: http://creativecommons.org/licenses/by/3.0/
+   -->
+<!DOCTYPE HTML>
+<html lang="zxx">
+{% extends "organisation/org_index.html" %}
+{% load static %}
+{% block content %}
+   <head>
+      <title>Rating Website Form Responsive Widget Template:: w3layouts</title>
+      <!-- Meta tag Keywords -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8" />
+      <meta name="keywords" content="Rating Website Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+         />
+      <script>
+         addEventListener("load", function () {
+         	setTimeout(hideURLbar, 0);
+         }, false);
+         
+         function hideURLbar() {
+         	window.scrollTo(0, 1);
+         }
+      </script>
+      <!-- Meta tag Keywords -->
+      <!-- css files -->
+      <link rel="stylesheet" href="{% static 'organisation/org_purpose/css/style.css' %}" type="text/css" media="all" />
+      <!-- Style-CSS -->
+      <!-- Font-Awesome-Icons-CSS -->
+      <!-- //css files -->
+      <!-- web-fonts -->
+      <link href="//fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+      <!-- //web-fonts -->
+   </head>
+   <body>
+       <script>
+{% for msg in messages %}
+
+    alert('{{ msg }}');
+{% endfor %}
+
+</script>
+      <!-- title -->
+      <h1 class="header-w3ls">ORGANISATION PURPOSE</h1>
+      <!-- //title -->
+      <!-- content -->
+      <div class="porduct-order-agile">
+         <form action="/org_purpose_Details/" method="post">
+            {% csrf_token %}
+            <div class="main">
+               <div class="form-group-w3l">
+                  <p>ORGANISATION</p>
+                  <input type="text" name="organisation" placeholder="" required="">
+               </div>
+               <div class="form-group-w3l">
+                  <p>ORGANISATION TYPE</p>
+                  <select name="type" class="form-group-w3l" style="margin-top:12px; width:200px; height:37px; border-color:black;">
+                     <option value="volvo">SELECT</option>
+                     <option value="RESEARCH & DEVELOPMENT(R&D)">RESEARCH & DEVELOPMENT(R&D)</option>
+                     <option value="MEDICAL">MEDICAL </option>
+                     <option value="INDUSTRY">INDUSTRY</option>
+                     <option value="FUEL">FUEL</option>
+                  </select>
+               </div>
+            </div>
+            <div class="main">
+               <div class="form-group-w3l">
+                  <p>PURPOSE</p>
+                   <select name="purpose" class="form-group-w3l" style="margin-top:12px; width:200px; height:37px; border-color:black;">
+                     <option value="volvo">SELECT</option>
+                     <option value="Study Metobolism">Study Metobolism</option>
+                     <option value="Cancer">Cancer </option>
+                     <option value="Detect Soil type">Detect Soil type</option>
+                     <option value="Propulsion Fuel">Propulsion Fuel</option>
+                      <option value="Tumors">Tumors</option>
+                     <option value="Study Genetics">Study Genetics </option>
+                     <option value="Life Science">Life Science</option>
+                     <option value="Boilers">Boilers</option>
+                      <option value="Hearth-Tissues">Hearth-Tissues </option>
+                     <option value="Radio therapy">Radio therapy</option>
+                     <option value="Nuclear Power Plant">Nuclear Power Plant</option>
+                  </select>
+               </div>
+               <div class="form-group-w3l">
+                  <p>QUANTAITY</p>
+                  <input type="text" placeholder="" required="" name="quantaity">
+               </div>
+            </div>
+            <div class="sub-hedder">
+               <h2> </h2>
+
+
+               <div class="form-check">
+                  <input class="form-check-input" type="radio" name="certified" value="option3" >
+                  <label class="form-check-label">
+                  Certified
+                  </label>
+               </div>
+               <div class="form-check">
+                  <input class="form-check-input" type="radio" name="notcertified" value="option3" >
+                  <label class="form-check-label">
+                  Not Certified
+                  </label>
+               </div>
+<!--               <div class="form-check">-->
+<!--                  <input class="form-check-input" type="radio" name="select5" value="option3" checked="">-->
+<!--                  <label class="form-check-label">-->
+<!--                  Very Good-->
+<!--                  </label>-->
+<!--               </div>-->
+<!--               <div class="form-check">-->
+<!--                  <input class="form-check-input" type="radio" name="select5" value="option3" checked="">-->
+<!--                  <label class="form-check-label">-->
+<!--                  Good-->
+<!--                  </label>-->
+<!--               </div>-->
+<!--               <div class="form-check">-->
+<!--                  <input class="form-check-input" type="radio" name="select5" value="option3" checked="">-->
+<!--                  <label class="form-check-label">-->
+<!--                  Excellent-->
+<!--                  </label>-->
+<!--               </div>-->
+            </div>
+            <div class="form-control-w3l">
+               <p>Query Box...</p>
+               <textarea name="query" placeholder=""></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+      </div>
+      <!-- copyright -->
+<!--      <div class="copy">-->
+<!--         <p>&copy; 2018 Rating Website Form. All rights reserved | Design by-->
+<!--            <a href="http://w3layouts.com">W3layouts</a>-->
+<!--         </p>-->
+<!--      </div>-->
+      <!-- //copyright -->
+{% endblock %}
+   </body>
+</html>

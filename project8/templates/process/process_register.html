@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static 'register/style.css' %}">
+</head>
+<body>
+<a href="/"><button style="background-color:purple;">HOME</button></a>
+    <script>
+{% for msg in messages %}
+
+    alert('{{ msg }}');
+{% endfor %}
+
+</script>
+<div class="loginBox" style="width:500px;height:670px;"> <img class="user" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" height="100px" width="100px">
+        <h3>PROCESS REGISTER</h3>
+        <form action="/Process_register/" method="post" autocomplete="off">
+
+            {% csrf_token %}
+            <div class="inputBox" >
+                <input id="uname" type="text" name="username" placeholder="Username">
+                <input id="uname" type="text" name="email" placeholder="Email">
+                <input id="uname" type="text" name="contact" placeholder="Contact">
+                <input id="uname" type="text" name="gender" placeholder="Gender">
+                <input id="uname" type="text" name="address" placeholder="Address">
+                <input id="pass" type="password" name="password" placeholder="Password">
+            </div>
+            <input type="submit" name="" value="Register">
+        </form>
+        <a href="/Process_login/">ALREADY USER<br> </a>
+        <div class="text-center">
+<!--            <p style="color: #59238F;">Sign-Up</p>-->
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>
